@@ -6,4 +6,13 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
   end
+
+  def create
+    post = Post.new(params[:post].permit(:title, :content))
+    if post.save
+      redirect_to posts_path
+    else
+
+    end
+  end
 end
