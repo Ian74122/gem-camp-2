@@ -15,4 +15,8 @@ class PostsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def show
+    @post = Post.find(params[:id])
+  end
 end
