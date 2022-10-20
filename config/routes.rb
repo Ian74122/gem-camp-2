@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get "welcome/say_hello" => "welcome#say"
   # root 'welcome#index'
   resources :posts do
-    resources :comments
+    resources :comments, except: :show
   end
 end
