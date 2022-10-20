@@ -2,7 +2,10 @@
 <h2>Comments</h2>
 <ul>
   <% @comments.each do |comment| %>
-    <li><%= comment.content %>(<%= comment.created_at %>)</li>
+    <li>
+      <%= comment.content %>(<%= comment.created_at %>)
+      <%= link_to 'edit', edit_post_comment_path(@post, comment) %>
+    </li>
   <% end %>
 </ul>
 
