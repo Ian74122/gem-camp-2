@@ -5,6 +5,7 @@
     <li>
       <%= comment.content %>(<%= comment.created_at %>)
       <%= link_to 'edit', edit_post_comment_path(@post, comment) %>
+      <%= button_to 'delete', post_comment_path(@post, comment), method: :delete %>
     </li>
   <% end %>
 </ul>
