@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   get "welcome/say_hello" => "welcome#say"
   # root 'welcome#index'
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 end
