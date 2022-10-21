@@ -14,5 +14,8 @@
     <%= form.label :content %>
     <%= form.text_field :content %>
   </div>
+  <div>
+    <%= form.collection_check_boxes :category_ids, Category.all, :id, :name %>
+  </div>
   <%= form.submit %>
 <% end %>
