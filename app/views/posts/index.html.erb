@@ -4,6 +4,7 @@
   <thead>
   <td>title</td>
   <td>content</td>
+  <td>user</td>
   <td>category</td>
   <td>action</td>
   </thead>
@@ -12,6 +13,7 @@
       <td><%= post.title %></td>
       <td><%= post.content %></td>
       <td><%= post.categories.pluck(:name).join(',') %></td>
+      <td><%= post.user.email %></td>
       <td>
         <%= link_to 'Show', post_path(post) %>
         <%= link_to 'Edit', edit_post_path(post) %>
