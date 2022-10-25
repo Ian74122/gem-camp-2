@@ -6,6 +6,7 @@
   <td>content</td>
   <td>category</td>
   <td>user</td>
+  <td>comments count</td>
   <td>action</td>
   </thead>
   <% @posts.each do |post| %>
@@ -14,6 +15,7 @@
       <td><%= post.content %></td>
       <td><%= post.categories.pluck(:name).join(',') %></td>
       <td><%= post.user.email %></td>
+      <td><%= post.comments_count %></td>
       <td>
         <%= link_to 'Show', post_path(post) %>
         <%= link_to 'Edit', edit_post_path(post) if post.user == current_user %>
